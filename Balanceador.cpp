@@ -48,22 +48,25 @@ int main()
     string expre;
     string resp;
 
-    do {
-            cout << "\nDigite a expressão para verificar se está ou não balanceada: \n";
-            getline(cin, expre); 
+    do 
+    {
+        cout << "\nDigite a expressão para verificar se está ou não balanceada: \n";
+        getline(cin, expre); 
 
-            if (verificaBalanceamento(expre)) 
-            {
-                cout << "\nA expressão está balanceada!\n";
-            } 
-            else 
-            {
-                cout << "\nA expressão não está balanceada!\n";
-            }
-            cout << "\nDeseja verificar uma nova expressão? (Sim ou não)\n";
-            cin >> resp;
-            cin.ignore(); 
+        if (verificaBalanceamento(expre)) 
+        {
+            cout << "\nA expressão está balanceada!\n";
+        } 
+        else 
+        {
+            cout << "\nA expressão não está balanceada!\n";
+        }
+
+        cout << "\nDeseja verificar uma nova expressão? (Sim ou não)\n";
+        cin >> resp;
+        cin.ignore(); 
     } 
     while (resp == "Sim" || resp == "sim" || resp == "S" || resp == "s");
+    
     return 0;
 }
